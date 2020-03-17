@@ -1,0 +1,29 @@
+    int size;
+    System.out.println("Enter Size of the Array: ");
+    size = sc.nextInt();
+    int arry[] = new int[size];
+    //inputing elements into the array
+    for(int i = 0; i< arry.length;i++){
+            System.out.print(": ");
+            arry[i] = sc.nextInt();
+        }
+    System.out.println();
+    System.out.println("Input Array is : "+Arrays.toString(arry));
+    System.out.println();
+    //finding the maximum value in the Array
+    int Max = getMax(arry);
+    int index = getindex(arry);
+    int NewArry[] = new int[size - 1];
+    NewArry = deleteElement(arry, index);
+    int newLarge = getMax(NewArry);
+    int diff = Max - newLarge;  // difference of the largest value from the first array and the new large value
+    arry[index] = newLarge; // replacing the largest value with the new value from the new array
+    int[] result = new int[arry.length+1];
+    for(int i = 0; i < index+1; i++)
+        result[i] = arry[i];
+    result[index+1] = diff;
+    for(int i = index+2; i < arry.length+1; i++)
+        result[i] = arry[i - 1];    //inserting the new  values:- added will give the largesy value from the first array
+
+    System.out.println();
+    System.out.println("The new arry is: "+Arrays.toString(result));

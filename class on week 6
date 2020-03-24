@@ -1,0 +1,68 @@
+
+package week6;
+
+public class Week6 {
+   private float lenght;
+   private float width;
+    
+   public rectangular(float lenght, float width) {
+        this.lenght = 1.0f; 
+        this.width = 1.0f; 
+    } 
+//   public void rectangle(float lenght, float width);
+    
+   public float getlenght() 
+    { 
+        return lenght; 
+    } 
+    public void setlenght(float lenght) {
+        this.lenght = lenght;
+    }
+
+   public float getwidth() 
+    { 
+        return width; 
+    } 
+   public void setwidth(float width) {
+        this.width = width;
+    }
+    public float getarea() {
+        return lenght * width
+    }
+    public float getperimeter() {
+        return (2(lenght) * 2(width))
+  
+   private double id;
+   private String firstname;
+   private String lastname;
+   private double salary;
+    
+   public employee(double id, String firstname, String lastname, double salary) {
+        this.id = id; 
+        this.firstname = fn;
+        this.lastname = ln;
+        this.salary = S;
+    } 
+//   public void rectangle(float lenght, float width);
+    
+   public double getid() { 
+        return id; 
+    } 
+   public String getfirstname() { 
+        return fn; 
+    }
+   public String getlastname() { 
+        return ln; 
+    }
+   public String getname() { 
+        return fn + ln; 
+    }
+   public double getsalary() { 
+        return S; 
+    }
+   public void setsalary(double salary) {
+        this.salary = salary;
+    }
+
+}
+ public static void main(String[] args) {
